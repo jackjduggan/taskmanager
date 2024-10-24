@@ -1,0 +1,89 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #ffffff;
+}
+
+/* Task List Header */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-header span {
+  flex: 1; /* Each item takes up equal space */
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* Task Card details */
+.task-main {
+  flex: 1; /* Each item takes up equal space */
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* Task Card details */
+.task-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.task-details:hover {
+  background-color: #f9f9f9;
+}
+
+.task-details span {
+  flex: 1;
+  padding: 0 10px;
+  text-align: left;
+}
+
+/* Priority classes */
+.priority {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.priority-urgent {
+  background-color: #ff4c4c; /* Red */
+  color: white;
+}
+
+.priority-high {
+  background-color: #ff944c; /* Orange */
+  color: white;
+}
+
+.priority-medium {
+  background-color: #ffd84c; /* Yellow */
+  color: black;
+}
+
+.priority-low {
+  background-color: #4cafff; /* Blue */
+  color: white;
+}
+
+/* Task item */
+.task-item {
+  list-style-type: none;
+  margin: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
