@@ -1,34 +1,29 @@
 package com.dugganjack.taskmanager;
-
 import java.time.LocalDateTime;
+import jakarta.persistence.*;
 
+@Entity
 public class Task {
     
-    long id;
-    String title;
-    String description;
-    String status;
-    String priority;
-    LocalDateTime dueDate;
-    LocalDateTime createdAt;
-    LocalDateTime updatedAt;
-    LocalDateTime completedAt;
-    String assignedUser;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String title;
+    private String description;
+    private String status;
+    private String priority;
+    private LocalDateTime dueDate;
+
 
     public Task() { }
 
-    public Task(long id, String title, String description, String status, String priority, LocalDateTime dueDate,
-            LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime completedAt, String assignedUser) {
+    public Task(long id, String title, String description, String status, String priority, LocalDateTime dueDate) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.status = status;
         this.priority = priority;
         this.dueDate = dueDate;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.completedAt = completedAt;
-        this.assignedUser = assignedUser;
     }
 
     public long getId() {
@@ -78,40 +73,5 @@ public class Task {
     public void setDueDate(LocalDateTime dueDate) {
         this.dueDate = dueDate;
     }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public LocalDateTime getCompletedAt() {
-        return completedAt;
-    }
-
-    public void setCompletedAt(LocalDateTime completedAt) {
-        this.completedAt = completedAt;
-    }
-
-    public String getAssignedUser() {
-        return assignedUser;
-    }
-
-    public void setAssignedUser(String assignedUser) {
-        this.assignedUser = assignedUser;
-    }
-
-    
-
     
 }
